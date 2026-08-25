@@ -1,0 +1,122 @@
+{
+  "sourceFile": "Demosum2.flw",
+  "caption": "Results are from demo case Demosum2.flw — user inputs do not recompute.",
+  "summary": {
+    "client": "Company",
+    "project": "Subsea",
+    "fluid": "Crude Oil",
+    "phaseSeparation": "BO Correlation: Standing",
+    "eos": "Peng Robinson",
+    "oilFlowrate": 10000,
+    "oilFlowrateUnit": "stbo/day",
+    "gor": 500,
+    "gorUnit": "scf/stbo",
+    "glr": 100,
+    "glrUnit": "scf/stb liquid",
+    "waterCut": 20,
+    "reservoirPressure": 3000,
+    "inletPressure": 2761,
+    "inletTemperature": 70.0,
+    "tvdLiftGas": 1000,
+    "oilGravity": 37.0,
+    "deadOilViscosity": [
+      { "value": 2.0, "temp": 70.0 },
+      { "value": 4.0, "temp": 10.0 }
+    ]
+  },
+  "flowrates": [10000, 9000, 8000, 7000],
+  "segments": [
+    {
+      "segment": 1,
+      "distanceKm": 0.0,
+      "elevationM": 0,
+      "staticLoss": 0.0,
+      "frictionLoss": 0.12,
+      "accelLoss": 0.0,
+      "pressure": 194.2,
+      "temp": 70.0,
+      "liquidRate": 66.2,
+      "gasRate": 118.4,
+      "holdup": 0.92,
+      "ambientTemp": 16.0,
+      "regime": "Single phase liquid"
+    },
+    {
+      "segment": 5,
+      "distanceKm": 0.45,
+      "elevationM": 180,
+      "staticLoss": 1.85,
+      "frictionLoss": 0.41,
+      "accelLoss": 0.02,
+      "pressure": 191.8,
+      "temp": 68.4,
+      "liquidRate": 66.5,
+      "gasRate": 125.1,
+      "holdup": 0.78,
+      "ambientTemp": 14.5,
+      "regime": "Hagedorn & Brown"
+    },
+    {
+      "segment": 9,
+      "distanceKm": 0.89,
+      "elevationM": 420,
+      "staticLoss": 3.62,
+      "frictionLoss": 0.88,
+      "accelLoss": 0.05,
+      "pressure": 188.1,
+      "temp": 65.2,
+      "liquidRate": 67.1,
+      "gasRate": 138.6,
+      "holdup": 0.61,
+      "ambientTemp": 12.0,
+      "regime": "Hagedorn & Brown"
+    },
+    {
+      "segment": 13,
+      "distanceKm": 1.34,
+      "elevationM": 890,
+      "staticLoss": 7.15,
+      "frictionLoss": 1.42,
+      "accelLoss": 0.08,
+      "pressure": 182.4,
+      "temp": 61.0,
+      "liquidRate": 68.0,
+      "gasRate": 152.3,
+      "holdup": 0.48,
+      "ambientTemp": 10.5,
+      "regime": "Beggs & Brill"
+    },
+    {
+      "segment": "End",
+      "distanceKm": 1.788,
+      "elevationM": 1788,
+      "staticLoss": 12.4,
+      "frictionLoss": 2.15,
+      "accelLoss": 0.12,
+      "pressure": 174.6,
+      "temp": 54.8,
+      "liquidRate": 69.2,
+      "gasRate": 171.0,
+      "holdup": 0.35,
+      "ambientTemp": 8.0,
+      "regime": "Beggs & Brill"
+    }
+  ],
+  "pressureProfile": [
+    { "distanceKm": 0.0, "pressurePsia": 2761, "tempC": 70.0 },
+    { "distanceKm": 0.3, "pressurePsia": 2680, "tempC": 68.5 },
+    { "distanceKm": 0.6, "pressurePsia": 2585, "tempC": 66.2 },
+    { "distanceKm": 0.9, "pressurePsia": 2470, "tempC": 63.8 },
+    { "distanceKm": 1.2, "pressurePsia": 2340, "tempC": 60.5 },
+    { "distanceKm": 1.5, "pressurePsia": 2205, "tempC": 57.2 },
+    { "distanceKm": 1.788, "pressurePsia": 2094, "tempC": 54.8 }
+  ],
+  "graphTypes": [
+    { "type": "1", "parameters": "Segmental distance v Pressure", "xAxis": "Kilometres", "yAxis": "Psia", "third": "Flowrate (Stb oil/day)" },
+    { "type": "2", "parameters": "Segmental distance v Temperature", "xAxis": "Kilometres", "yAxis": "Deg C", "third": "Flowrate (Stb oil/day)" },
+    { "type": "3", "parameters": "Segmental distance v Liquid holdup", "xAxis": "Kilometres", "yAxis": "Fraction", "third": "Flowrate (Stb oil/day)" },
+    { "type": "4", "parameters": "Segmental elevation v Pressure", "xAxis": "Metres", "yAxis": "Psia", "third": "Flowrate (Stb oil/day)" },
+    { "type": "5", "parameters": "Liquid flowrate v Outlet pressure", "xAxis": "stbo/day", "yAxis": "Psia", "third": "Lift Gas (MMscf/day)" },
+    { "type": "6", "parameters": "Liquid flowrate v Inlet pressure", "xAxis": "stbo/day", "yAxis": "Psia", "third": "Water cut %" }
+  ]
+}
